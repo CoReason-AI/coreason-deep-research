@@ -1,4 +1,4 @@
-# coreason-deep-research - AI System Directives
+# coreason_deep_research - AI System Directives
 
 **SYSTEM DIRECTIVE: STRICT ARCHITECTURAL BOUNDARIES ENFORCED**
 

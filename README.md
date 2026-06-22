@@ -1,4 +1,4 @@
-# coreason-deep-research
+# coreason_deep_research
 
 Coreason Deep research
 

@@ -1,5 +1,5 @@
 [project]
-site_name = "coreason-deep-research"
+site_name = "coreason_deep_research"
 site_url = "https://CoReason-AI.github.io/coreason_deep_research/"
 repo_url = "https://github.com/CoReason-AI/coreason_deep_research"
 docs_dir = "docs"
