@@ -106,3 +106,6 @@ asyncio_mode = "auto"
 
 [tool.coverage.run]
 omit = ["tests/*"]
+
+[tool.deptry]
+ignore = ["DEP002", "DEP003"]

@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 HEAD_TO_HEAD_PROMPT = """
 We are testing out two different implementations of a deep research agent. This research agent is designed to conduct deep research on a given question.
 
-This was the question: 
+This was the question:
 {question}
 
 First Implementation's Response:
@@ -16,7 +16,7 @@ Second Implementation's Response:
 
 In order to evaluate these agents, keep the following criteria in mind:
 - A good research agent should research sufficient sources to answer the question. These sources should be diverse and high quality. More sources is not always necessarily better, but it is important to have ENOUGH sources to feel confident in the claims that are made.
-- A good research agent should completely and comprehensively answer the user's question. 
+- A good research agent should completely and comprehensively answer the user's question.
 - Deep research agents are expensive. The user expects a very good, and also very detailed answer. They should get all of the information that they need from this response, and should not have to ask for followups usually.
 - Citations should be provided for all claims, and should be formatted in a way that is easy to read and understand.
 
@@ -64,7 +64,7 @@ def head_to_head_evaluator(inputs: dict, outputs: list[dict]) -> list:
 ALL_THREE_PROMPT = """
 We are testing out three different implementations of a deep research agent. This research agent is designed to conduct deep research on a given question.
 
-This was the question: 
+This was the question:
 {question}
 
 First Implementation's Response:
@@ -78,7 +78,7 @@ Third Implementation's Response:
 
 In order to evaluate these agents, keep the following criteria in mind:
 - A good research agent should research sufficient sources to answer the question. These sources should be diverse and high quality. More sources is not always necessarily better, but it is important to have ENOUGH sources to feel confident in the claims that are made.
-- A good research agent should completely and comprehensively answer the user's question. 
+- A good research agent should completely and comprehensively answer the user's question.
 - Deep research agents are expensive. The user expects a very good, and also very detailed answer. They should get all of the information that they need from this response, and should not have to ask for followups usually.
 - Citations should be provided for all claims, and should be formatted in a way that is easy to read and understand.
 
