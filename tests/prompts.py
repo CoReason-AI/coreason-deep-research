@@ -96,7 +96,7 @@ CORRECTNESS_PROMPT = """You are evaluating the correctness of a research report 
 
 You will be provided with the question, the report, and the answer from an independent authority.
 
-Score the report from 1-5 on how well it mirrors the answer from the authority. 
+Score the report from 1-5 on how well it mirrors the answer from the authority.
 We expect the report to contain more information that is not in the answer, that's perfectly okay.
 They likely won't be perfectly the same, but they should have the same themes and ideas to get a high score.
 
@@ -167,8 +167,8 @@ Today is {today}
 GROUNDEDNESS_PROMPT = """
 You are evaluating how well a research report aligns with and is supported by the context retrieved from the web. Your evaluation should focus on the following criteria:
 
-<Rubric> 
-A well-grounded report should: 
+<Rubric>
+A well-grounded report should:
 - Make claims that are directly supported by the retrieved context
 - Stay within the scope of information provided in the context
 - Maintain the same meaning and intent as the source material
@@ -238,7 +238,7 @@ An incomplete report:
 - Focus solely on completeness of the report
 - Ignore whether external knowledge suggests different facts
 - Consider both explicit and implicit claims
-- Provide specific examples of complete/incomplete content  
+- Provide specific examples of complete/incomplete content
 </Reminder>
 
 <research_brief>
@@ -247,7 +247,7 @@ An incomplete report:
 
 <user_question>
 {user_question}
-</user_question>  
+</user_question>
 
 <report>
 {report}

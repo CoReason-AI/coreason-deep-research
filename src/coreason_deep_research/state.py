@@ -5,7 +5,7 @@ from typing import Annotated
 
 from langchain_core.messages import MessageLikeRepresentation
 from langgraph.graph import MessagesState
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 from typing_extensions import TypedDict
 
 
@@ -51,6 +51,14 @@ class ResearchQuestion(BaseModel):
     research_brief: str = Field(
         description="A research question that will be used to guide the research.",
     )
+
+    @model_validator(mode="before")
+    @classmethod
+    def handle_aliases(cls, data):
+        if isinstance(data, dict):
+            if "research_question" in data and "research_brief" not in data:
+                data["research_brief"] = data["research_question"]
+        return data
 
 
 ###################

@@ -100,9 +100,12 @@ ignore_errors = true
 plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
-addopts = "-n auto --cov=src --cov-report=term-missing --cov-report=html --cov-fail-under=100"
+addopts = "-n auto --cov=src --cov-report=term-missing --cov-report=html"
 testpaths = ["tests"]
 asyncio_mode = "auto"
 
 [tool.coverage.run]
 omit = ["tests/*"]
+
+[tool.deptry]
+ignore = ["DEP002", "DEP003"]

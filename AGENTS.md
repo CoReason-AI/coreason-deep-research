@@ -170,7 +170,7 @@ Adhere to 12-Factor App principles. Use these standard variable names:
 ### **CI/CD Context**
 
 * **CI Environment:** GitHub Actions (Matrix testing on Ubuntu, Windows, MacOS).
-* **Python Versions:** Tests run against Python 3.14 and 3.14t.
+* **Python Versions:** Tests run against Python 3.14.
 
 ### **Docker Strategy**
 
