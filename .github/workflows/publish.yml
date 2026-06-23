@@ -49,6 +49,12 @@ jobs:
             dist/*.tar.gz
             dist/*.whl
 
+      - name: Clean dist folder for PyPI
+        run: |
+          mkdir -p dist-assets
+          find dist/ -maxdepth 1 -type f ! -name "*.tar.gz" ! -name "*.whl" -exec mv {} dist-assets/ \;
+        shell: bash
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
