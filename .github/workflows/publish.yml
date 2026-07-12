@@ -24,18 +24,18 @@ jobs:
           enable-cache: true
           python-version: '3.11'
 
+      - name: Build package
+        run: uv build
+        shell: bash
+
       - name: Build Docs
-        run: uv run zensical build
+        run: uv run --frozen zensical build
         shell: bash
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "site/"
-
-      - name: Build package
-        run: uv build
-        shell: bash
 
       - name: Generate SBOM
         uses: anchore/sbom-action@v0
