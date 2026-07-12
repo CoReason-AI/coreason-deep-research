@@ -24,7 +24,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-          python-version: '3.14'
+          python-version: '3.11'
       - name: Install dependencies
         run: uv sync --all-extras --dev
         shell: bash
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.14"]
+        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
       - name: Install uv
@@ -73,7 +73,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-latest]
-        python-version: ["3.14"]
+        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
       - name: Install uv
@@ -100,7 +100,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-          python-version: "3.14"
+          python-version: "3.11"
       - name: Build wheel
         run: uv build
         shell: bash

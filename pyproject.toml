@@ -7,7 +7,7 @@ name = "coreason_deep_research"
 dynamic = ["version"]
 description = "Coreason Deep research"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 authors = [
     { name = "Akshaya M", email = "akshaya.movvar@coreason.ai" },
 ]
@@ -87,14 +87,14 @@ Documentation = "https://github.com/CoReason-AI/coreason_deep_research"
 
 [tool.ruff]
 line-length = 120
-target-version = "py314"
+target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "B", "I", "UP", "SIM", "RUF", "ARG", "C4", "PT", "TCH", "FA", "PIE", "RET", "PERF", "FURB", "LOG", "N", "A", "S"]
 ignore = ["S101", "TC001", "TC002", "TC003", "UP037", "E501", "B904", "ARG001", "LOG015", "SIM102", "PERF401", "PERF402"]
 
 [tool.mypy]
-python_version = "3.14"
+python_version = "3.11"
 ignore_missing_imports = true
 ignore_errors = true
 plugins = ["pydantic.mypy"]
