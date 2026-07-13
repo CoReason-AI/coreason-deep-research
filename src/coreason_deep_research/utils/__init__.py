@@ -1,3 +1,13 @@
+# Copyright (c) 2026 CoReason, Inc.
+#
+# This software is proprietary and dual-licensed.
+# Licensed under the Prosperity Public License 3.0 (the "License").
+# A copy of the license is available at https://prosperitylicense.com/versions/3.0.0
+# For details, see the LICENSE file.
+# Commercial use beyond a 30-day trial requires a separate license.
+#
+# Source Code: https://github.com/CoReason-AI/coreason_deep_research
+
 """Utility functions and helpers for the Deep Research agent."""
 
 import asyncio
@@ -604,7 +614,7 @@ def anthropic_websearch_called(response):
         # Return True if any web search requests were made
         return web_search_requests > 0
 
-    except AttributeError, TypeError:
+    except (AttributeError, TypeError):
         # Handle cases where response structure is unexpected
         return False
 

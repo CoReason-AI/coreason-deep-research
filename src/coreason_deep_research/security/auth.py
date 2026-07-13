@@ -1,3 +1,13 @@
+# Copyright (c) 2026 CoReason, Inc.
+#
+# This software is proprietary and dual-licensed.
+# Licensed under the Prosperity Public License 3.0 (the "License").
+# A copy of the license is available at https://prosperitylicense.com/versions/3.0.0
+# For details, see the LICENSE file.
+# Commercial use beyond a 30-day trial requires a separate license.
+#
+# Source Code: https://github.com/CoReason-AI/coreason_deep_research
+
 import asyncio
 import os
 from typing import Any
@@ -31,7 +41,7 @@ async def get_current_user(authorization: str | None) -> Auth.types.MinimalUserD
     try:
         scheme, token = authorization.split()
         assert scheme.lower() == "bearer"
-    except ValueError, AssertionError:
+    except (ValueError, AssertionError):
         raise Auth.exceptions.HTTPException(status_code=401, detail="Invalid authorization header format")
 
     # Ensure Supabase client is initialized
